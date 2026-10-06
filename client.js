@@ -5,7 +5,7 @@ exports.RegisteredVehiclesV3 = void 0;
 const RegisteredVehiclesV3QueryEndpoint = "https://opendata.rdw.nl/api/v3/views/m9d7-ebf2/query.json";
 class RegisteredVehiclesV3 {
     constructor() { }
-    async query(license_plate, page, max_entry) {
+    async query(options) {
         try {
             let res = await fetch(RegisteredVehiclesV3QueryEndpoint, {
                 method: "POST",
@@ -13,10 +13,10 @@ class RegisteredVehiclesV3 {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    "query": `SELECT * WHERE kenteken='${license_plate}'`,
+                    "query": `SELECT * WHERE kenteken='${options.license_plate}'`,
                     "page": {
-                        "pageNumber": page,
-                        "pageSize": max_entry
+                        "pageNumber": options.page,
+                        "pageSize": options.max_entry
                     }
                 })
             });

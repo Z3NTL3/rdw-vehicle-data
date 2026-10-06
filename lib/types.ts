@@ -49,5 +49,9 @@ export interface RegisteredVehicleT {
   date_of_first_registration_in_netherlands_dt: string;
 }
 
-
+export interface QueryOpts {
+  license_plate: string,
+  page: number,
+  max_entry: number
+}
 export type RegisteredVehicleList = Array<{[key: string]: string}>

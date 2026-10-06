@@ -1,35 +1,22 @@
-## RDW-VEHICLE-DATA
+## RDW Dutch Vehicle OpenData
+
+```html
+<body>
+  <script src="client.js"></script>
+  <script>
+      const rdw = new window.RDWVehicle.RegisteredVehiclesV3();
+      rdw.query("GH123B", 1, 100)
+          .then(console.log)
+          .catch(console.error);
+  </script>
+</body>
+```
 
 Retrieve vehicle information from Dutch license plate numbers using RDW Open Data. 
 
 - https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen/m9d7-ebf2/about_data
 
 This package does not use any token as RDW OpenData permits requests to it's datasets without any authorization. Queries performed using this package should strictly bound to the browser client. Therefore the browser SDK should be used which is ``client.js`` as defined in ``package.json > browser`` and not the Node variant.
-
-#### Usage
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>playground</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <script src="client.js"></script>
-    <script>
-        const rdw = new window.RDWVehicle.RegisteredVehiclesV3();
-        rdw.query("GH123B", 1, 100)
-            .then(result => {
-                console.log(result);
-            }).catch(console.error);
-    </script>
-  </body>
-</html>
-```
 
 #### Example
 
