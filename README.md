@@ -5,8 +5,14 @@
   <script src="client.js"></script>
   <script>
       const rdw = new window.RDWVehicle.RegisteredVehiclesV3();
-      rdw.query("GH123B", 1, 100)
-          .then(console.log)
+      rdw.query({
+        license_plate: "GH123B",
+        page: 1,
+        max_entry:100
+      })
+          .then(result => {
+              console.log(result);
+          })
           .catch(console.error);
   </script>
 </body>
