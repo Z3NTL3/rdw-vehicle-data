@@ -1,3 +1,4 @@
+// soon implemented
 export interface RegisteredVehicleT {
   license_plate: string;
   vehicle_type: string;
