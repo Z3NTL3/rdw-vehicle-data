@@ -20,7 +20,9 @@ Retrieve vehicle information from Dutch license plate numbers using RDW Open Dat
 
 - https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen/m9d7-ebf2/about_data
 
-This package does not use any token as RDW OpenData permits requests to it's datasets without any authorization. Queries performed using this package should strictly bound to the browser client. Therefore the browser SDK should be used which is ``client.js`` as defined in ``package.json > browser`` and not the Node variant.
+This package does not use any token as RDW OpenData permits requests to it's datasets without any authorization. Queries performed using this package are intended to be executed exclusively in the browser. Therefore, the browser SDK should be used, as defined in ``package.json`` under ``browser``, rather than the Node.js variant. 
+
+Using the browser SDK allows your application to benefit from an effectively indefinite quota, as requests are made directly from the client device rather than through a centralized server.
 
 #### Example
 
