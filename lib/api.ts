@@ -2,7 +2,7 @@ import type { QueryOpts, RegisteredVehicleList } from "./types.js"
 
 const RegisteredVehiclesV3QueryEndpoint = "https://opendata.rdw.nl/api/v3/views/m9d7-ebf2/query.json"
 
-class RegisteredVehiclesV3 {
+export class RegisteredVehiclesV3 {
   constructor() { }
 
   public async query(options: QueryOpts): Promise<RegisteredVehicleList> {
@@ -27,5 +27,3 @@ class RegisteredVehiclesV3 {
     }
   }
 }
-
-export { RegisteredVehiclesV3 }

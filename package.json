@@ -1,11 +1,11 @@
 {
   "name": "rdw-vehicle-data",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "Retrieve vehicle information from Dutch license plate numbers using RDW Open Data",
   "license": "ISC",
   "author": "z3ntl3",
   "type": "module",
-  "main": "./dist/api.js",
+  "browser": "client.js",
   "types": "./dist/api.d.ts",
   "scripts": {
     "build": "tsc",
